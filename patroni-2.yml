@@ -41,9 +41,8 @@ pg_hba:
 
 postgresql:
   parameters:
-    # archive_command: cd /
+    # archive_command: cd /   After adding this archive_command by etcd update won't work
     # archive_mode: always
-    # archive_timeout: 1000s
   pgpass: /var/lib/postgresql/.pgpass
   listen: 0.0.0.0:5432
   connect_address: "pg-patroni-2:5432"
